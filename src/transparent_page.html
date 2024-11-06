@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; connect-src 'self' http://ipc.localhost;">
+
+    <link rel="stylesheet" href="./css/transparent_page.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Window</title>
+    <script type="module" src="/transparent_page.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: transparent; /* 设置背景透明 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white; /* 设置文本颜色为白色，以便在透明背景上可见 */
+        }
+    </style>
+</head>
+<body>
+    <div class="main_overlay">
+        <!-- <div class="overlay1"></div> -->
+        <canvas id="overlay1-canvas"></canvas>
+        <canvas id="overlay1-canvas-bottom"></canvas>
+    </div>
+    
+</body>
+</html>

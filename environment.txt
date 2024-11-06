@@ -1,0 +1,9 @@
+mkdir pythonlib
+cd pythonlib
+activate uuv
+python -m venv .env
+deactivate
+.\pythonlib\.env\Scripts\activate.bat
+set PYTHONHOME=D:\anaconda\envs\uuv
+set PATH=%PATH%;D:\anaconda\envs\uuv\
+cargo tauri build --debug

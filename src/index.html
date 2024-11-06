@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tauri App</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>欢迎来到Tauri</h1>
+
+      <div class="row">
+        <a href="https://tauri.app" target="_blank">
+          <img src="/assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
+        </a>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          target="_blank"
+        >
+          <img
+            src="/assets/javascript.svg"
+            class="logo vanilla"
+            alt="JavaScript logo"
+          />
+        </a>
+      </div>
+      <p>点击Tauri图标获取更多有关框架的信息</p>
+
+      <form class="row" id="greet-form">
+        <input id="greet-input" placeholder="Enter a name..." />
+        <button type="submit">打招呼</button>
+      </form>
+      <p id="greet-msg"></p>
+
+      <!-- 测试玩 -->
+      <form class="row" id="get-user-from">
+        <input id="username-input" placeholder="输入一个名字" />
+        <button type="submit">输入名字</button>
+      </form>
+      <p id="username-msg"></p>
+
+      <button class="openNewWindow-button">打开新窗口</button>
+
+    </main>
+  </body>
+</html>

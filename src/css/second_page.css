@@ -1,0 +1,279 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #0f0f0f;
+  background-color: #f1f1f1;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.main_container {
+  position: fixed;
+  margin: 0;
+  /* padding-top: 10vh; */
+  display: flex;
+  flex-direction: row; /*横向排列*/
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  /* bottom: 0px; */
+}
+
+
+.left_container {
+  display: flex;
+  flex: 1.7;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+.right_container {
+  position: fixed;
+  right: 0px;
+  display: flex;
+  /* flex: 1; */
+  width: 320px;
+  flex-direction: column; /*纵向排列*/
+  border: 1px solid #000;
+  height: 100%;
+  transform: translateX(100%);
+  /* margin: 10px; */
+}
+
+
+
+.right_container.visible {
+  transform: translateX(0);
+  position: unset;
+}
+
+
+/* 侧边栏 */
+aside {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  border: 1px solid #f6f6f6;
+  border-radius: 10px;
+  width: 210px;
+  height: calc(100vh - 10px);
+  background-color: #fafaf9;
+  padding: 20px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  transform:  translateX(-100%);
+  z-index: 5;
+}
+
+aside.visible {
+  transform: translateX(0);
+}
+
+/* 打开功能侧边栏按钮 */
+.open-setting-button {
+  display: block;
+  position: fixed;
+  background-color: #f1f1f1;
+  color: #333333;
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 30px;
+  /* 图层位置 */
+  z-index: 10;
+  border-radius: 0px; 
+  border: none;
+  text-align: center;
+}
+.open-setting-button:hover {
+  background-color: #e3d6d669;
+}
+
+.open-setting-button.opening_color {
+  background-color: #fafaf9;
+}
+
+
+/* 按钮文字和按钮的容器 */
+.button-with-text {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 2;
+}
+.button-text {
+  position: fixed;
+  top: 0px;
+  margin-left: 55px;
+  z-index: 0;
+  text-align: center;
+}
+
+/* 功能按钮 */
+.function-button {
+  display: block;
+  background-color: #fafaf9;
+  color: #333333;
+  height: 20;
+  left: 0px;
+  width: 205px;
+  /* border: 1px solid #f1eaea; */
+  padding: 10px;
+  border-radius: 0px;
+  /* 按钮之间的间距 */
+  margin-bottom: 0px; 
+  text-align: left;
+  border: none;
+  /* cursor: pointer; */ 
+}
+
+.function-button:hover {
+  background-color: #e3d6d669;
+}
+
+aside .button-container {
+  /* 自适应调整 */
+  height: calc(100vh - 40px);
+  width: 210px;
+  overflow-y: auto; /* 启用垂直滚动条 */
+  padding: 0;
+  background-color: #fafaf9;
+  border: none;
+  flex-direction: column;
+  gap: 0px; /* 按钮之间的间距 */
+}
+
+.button-container::-webkit-scrollbar {
+  /* 滚动条的宽度 */
+  width: 8px;  
+  height: 8px;  
+  background-color: #fafaf9;
+}
+/* 隐藏滚动条的上下小三角 */
+.button-container::-webkit-scrollbar-button {
+  display: none;
+}
+
+.function-button-setting {
+  position: absolute;
+  display: block;
+  background-color: #fafaf9;
+  color: #333333;
+  height: 20;
+  left: 0;
+  width: 100%;
+  /* border: 1px solid #f1eaea; */
+  padding: 10px;
+  border-radius: 0px;
+  /* 按钮之间的间距 */
+  margin-bottom: 0px; 
+  text-align: left;
+  border: none;
+  bottom: 30px;
+}
+.function-button-setting:hover {
+  background-color: #e3d6d669;
+}
+
+.grid-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+}
+
+.grid-main-container {
+  width: 100%;
+  position: relative;
+  /* left: 4px;
+  right: 4px; */
+  margin-left: 4px;
+  margin-right: 4px;
+  
+  /* height: 66vh; */
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(6,1fr);
+  column-gap: 4px;
+  row-gap: 4px;
+  bottom: 0px;
+  margin-bottom: 4px;
+  z-index: 4;
+}
+.grid-item-number {
+  /* width: 45%;
+  height: 11%; */
+  /* min-width: 20px;
+  min-height: 10px; */
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #0f0f0f;
+  text-align: center;
+  border: #333333;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.grid-item-number:hover {
+  background-color: #ffffffe0;
+}
+
+.grid-item-calcus {
+  padding: 10px;
+  background-color: #ebebeb;
+  border: 1px solid #0f0f0f;
+  text-align: center;
+  border: #333333;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.grid-item-calcus:hover {
+  background-color: #ffffffe0;
+}
+
+
+.output {
+  font-size: 2em;
+  text-align: right;
+  padding: 10px;
+  background-color: #f1f1f1;
+  flex: 1;
+}
+
+.screen_shot_button {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  right: 4px;
+  bottom: 4px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebebeb;
+}
+.screenshot-image {
+  width: 100%; /* 图片宽度适应按钮宽度 */
+  height: 100%; /* 图片高度适应按钮高度 */
+  object-fit: contain; /* 保持图片的纵横比 */
+  background-color: #ebebeb;
+}
+.screen_shot_button:hover {
+  background-color: #ffffffe0;
+}
+
+.screenshot-image:hover {
+  background-color: #ffffffe0;
+}

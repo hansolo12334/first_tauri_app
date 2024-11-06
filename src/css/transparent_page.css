@@ -1,0 +1,143 @@
+.main_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.0);
+  /* cursor: crosshair; */
+  z-index: 5;
+  overflow: hidden;
+}
+.content {
+  background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  padding: 20px;
+  border-radius: 10px;
+}
+.overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* cursor: crosshair; */
+  z-index: 5;
+  overflow: hidden;
+}
+
+.main_overlay::-webkit-scrollbar {
+  /* 滚动条的宽度 */
+  width: 0px;  
+  height: 0px;  
+  /* background-color: #fafaf9; */
+}
+/* 隐藏滚动条的上下小三角 */
+.main_overlay::-webkit-scrollbar-button {
+  display: none;
+}
+
+#overlay1-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.0);
+  /* cursor: crosshair; */
+  z-index: 5;
+  overflow: hidden;
+}
+
+
+#overlay1-canvas-bottom{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.0); */
+  /* cursor: crosshair; */
+  z-index: 2;
+  overflow: hidden;
+}
+
+
+
+.selection-root {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+  border:none;
+  background: rgba(0, 0, 0, 0.0);
+  pointer-events: none;
+  z-index: 8;
+}
+
+.selection-area {
+  position: absolute;
+  /* opacity: 0; */
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+  border: 2px dashed #2bff00;
+  background: rgba(0, 0, 0, 0.0);
+  pointer-events: none;
+  text-align: left;
+  font-size: 10px;
+  cursor:move;
+  z-index: 10;
+  /* mix-blend-mode: screen;  */
+}
+
+
+
+.selection-options {
+  position: absolute;
+  display:  flex;
+  bottom: 0px;
+  right: 0px;
+  border: 1px solid #f6f6f6;
+  border-radius: 10px;
+  width: 200px;
+  height: 30px;
+  background-color: #fafaf9;
+  /* padding: 20px; */
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  transition: transform 0.1s ease;
+  transform:  translateY(100%);
+  flex-direction: row;
+  z-index: 10;
+}
+.selection-options.onTop {
+  top:0px;
+  bottom: none;
+  transform:translateY(-100%);
+}
+
+.selection-options-button-apply {
+  position: fixed;
+  right: 0px;
+  height: 30px;
+  width: 30px;
+  z-index: 15;
+  /* background-color: #00fe11; */
+}
+.selection-options-button-apply:hover{
+  background-color: #dadada;
+}
+.selection-options-button-cancel {
+  position: fixed;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+  z-index: 15;
+  /* background-color: #ff0033; */
+}
+.selection-options-button-cancel:hover{
+  background-color: #dadada;
+}
+
